@@ -2,8 +2,8 @@
 .hero-section {
   display: flex;
   align-items: stretch;
-  width: 100%;
-  min-height: 220px;
+  width: 80%;
+  min-height: 180px;
   background:
     linear-gradient(to right, rgba(25,29,34,0.72) 40%, rgba(25,29,34,0.5) 100%),
     url('assets/img/hero-bg.jpg') center center/cover no-repeat;
