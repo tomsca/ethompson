@@ -217,3 +217,56 @@ ul.publications li {
     padding: 1em;
   }
 }
+.upcoming-courses {
+  background: #f9fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(30,40,60,0.05);
+  padding: 2em 2.5em;
+  margin: 2em 0;
+}
+
+.upcoming-courses h2 {
+  color: #174ea6;
+  font-size: 1.7em;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.course-semester {
+  margin-bottom: 1.6em;
+}
+
+.course-semester h3 {
+  color: #2a2a2a;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  margin-top: 0.3em;
+  border-left: 4px solid #ffd700;
+  padding-left: 0.7em;
+  font-weight: 600;
+}
+
+.course-semester ul {
+  margin: 0 0 0 1.2em;
+  padding: 0;
+  list-style: disc;
+}
+
+.course-semester li {
+  font-size: 1.05em;
+  margin-bottom: 0.35em;
+  color: #333;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .upcoming-courses {
+    padding: 1.2em 0.5em;
+  }
+  .course-semester h3 {
+    font-size: 1.07em;
+    padding-left: 0.4em;
+  }
+}
