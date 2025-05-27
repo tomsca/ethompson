@@ -270,3 +270,28 @@ ul.publications li {
     padding-left: 0.4em;
   }
 }
+main {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 2em;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  color: #0a2540;
+  margin-top: 0;
+  font-size: 1.3em;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.5em;
+}
