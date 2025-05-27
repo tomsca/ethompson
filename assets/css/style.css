@@ -6,7 +6,6 @@ body {
 }
 
 .home-bg {
-  /* Beautiful gradient background for home page */
   background: linear-gradient(120deg, #c6e2ff 0%, #fbeee6 100%);
   min-height: 100vh;
 }
@@ -14,19 +13,22 @@ body {
 nav {
   background: #0a2540;
   padding: 1em 0;
+  overflow-x: auto;
 }
 
 nav ul {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 nav li {
-  margin: 0 1em;
+  margin: 0 0.7em;
 }
 
 nav a {
@@ -36,6 +38,8 @@ nav a {
   padding: 0.5em 0.8em;
   border-radius: 4px;
   transition: background 0.2s;
+  font-size: 1em;
+  display: inline-block;
 }
 
 nav a:hover, nav a:focus {
@@ -70,4 +74,25 @@ main {
 
 h1 {
   color: #0a2540;
+}
+
+/* Responsive: shrink navigation font and spacing for small screens */
+@media (max-width: 900px) {
+  nav a {
+    font-size: 0.95em;
+    padding: 0.4em 0.5em;
+  }
+  nav li {
+    margin: 0 0.4em;
+  }
+}
+
+@media (max-width: 600px) {
+  nav a {
+    font-size: 0.88em;
+    padding: 0.35em 0.3em;
+  }
+  nav ul {
+    justify-content: flex-start;
+  }
 }
