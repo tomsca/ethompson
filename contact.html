@@ -3,23 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact | Emmanuel Thompson</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background:
+        linear-gradient(rgba(24,40,80,0.60), rgba(24,40,80,0.60)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80')
+        no-repeat center center fixed;
+      background-size: cover;
+    }
+    .center-wrapper {
+      flex: 1 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+    }
+    .contact-section {
+      max-width: 540px;
+      background: rgba(249,250,252, 0.97);
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(30,40,60,0.14);
+      padding: 2em 2.5em;
+      position: relative;
+      z-index: 2;
+    }
+    .contact-section h1 {
+      text-align: center;
+      color: #174ea6;
+      margin-bottom: 1.2em;
+      letter-spacing: 0.5px;
+      font-size: 2em;
+      font-weight: 700;
+    }
+    .contact-card {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .contact-info h2 {
+      color: #222;
+      font-size: 1.25em;
+      margin-bottom: 0.6em;
+      font-weight: 600;
+    }
+    .contact-info p {
+      font-size: 1.09em;
+      color: #333;
+      margin: 0.5em 0 0.5em 0;
+      line-height: 1.6;
+    }
+    .contact-info a {
+      color: #174ea6;
+      text-decoration: none;
+      border-bottom: 1px dotted #174ea6;
+      transition: color 0.17s;
+    }
+    .contact-info a:hover {
+      color: #d95a11;
+      border-bottom: 1px solid #d95a11;
+    }
+    nav, footer {
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .contact-section {
+        padding: 1.2em 0.7em;
+      }
+      .center-wrapper {
+        min-height: 90vh;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="service.html">Service</a></li>
-      <li><a href="professional-activities.html">Professional Activities</a></li>
-      <li><a href="actuarial-science-resources.html">Actuarial Science Resources</a></li>
-      <li><a href="statistics-data-science-resources.html">Statistics/Data Science Resources</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
+    <!-- Navigation code here if you have it -->
   </nav>
-  <main>
+  <div class="center-wrapper">
     <section class="contact-section">
       <h1>Contact</h1>
       <div class="contact-card">
@@ -35,16 +103,9 @@
         </div>
       </div>
     </section>
-  </main>
+  </div>
   <footer>
-    <div class="custom-footer">
-      <hr class="footer-line">
-      <div class="footer-content">
-        © <a href="mailto:ethompson@semo.edu" class="footer-link">Emmanuel Thompson</a> 2022 – 2025 |
-        <a href="https://github.com/tomsca" target="_blank" class="footer-link">Github</a> |
-        <a href="https://www.linkedin.com/in/emmanuel-thompson/" target="_blank" class="footer-link">Linkedin</a>
-      </div>
-    </div>
+    <!-- Footer code here if you have it -->
   </footer>
 </body>
 </html>
