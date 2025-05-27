@@ -116,3 +116,40 @@ footer a {
 footer a:hover {
   color: #ffd700;
 }
+
+.custom-footer {
+  margin: 0;
+  padding: 0;
+  border: 1.5px solid #222;
+  border-top: none;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-line {
+  border: none;
+  border-top: 1px dotted #bbb;
+  margin: 12px 0 10px 0;
+  width: 99%;
+}
+
+.footer-content {
+  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  color: #222;
+  padding-bottom: 10px;
+}
+
+.footer-link {
+  color: #0000ee;
+  text-decoration: underline;
+  margin: 0 2px;
+  transition: color 0.18s;
+}
+
+.footer-link:hover {
+  color: #1a0dab;
+}
