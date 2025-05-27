@@ -96,3 +96,23 @@ h1 {
     justify-content: flex-start;
   }
 }
+
+footer {
+  text-align: center;
+  padding: 1em 0 0.5em 0;
+  background: transparent;
+  font-size: 1em;
+  color: #333;
+}
+
+footer a {
+  color: #0a2540;
+  text-decoration: underline;
+  margin: 0 0.5em;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #ffd700;
+}
