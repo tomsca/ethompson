@@ -437,3 +437,11 @@ h2 {
 .news-list a:hover {
   color: #d95a11;
 }
+.news-year {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: left;
+  color: #174ea6;
+  margin-bottom: 0.7em;
+  letter-spacing: 1px;
+}
