@@ -755,3 +755,30 @@ nav ul li a {
   transition: background 0.15s;
   display: inline-block;
 }
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #174ea6;
+  padding: 0.2em 0;   /* Tighten vertical padding */
+  margin: 0;
+  list-style: none;
+  overflow-x: visible; /* Prevent scroll bar */
+}
+
+nav ul li {
+  margin: 0 0.2em;    /* Reduce horizontal margin */
+  white-space: nowrap;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.15em 0.3em; /* Tighten link padding */
+  border-radius: 3px;
+  font-size: 0.90em;     /* Smaller font */
+  transition: background 0.15s;
+  display: inline-block;
+}
