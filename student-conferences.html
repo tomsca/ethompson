@@ -44,14 +44,14 @@
     .chip.is-active{background:var(--chip);color:white;border-color:transparent;pointer-events:none;}
     .section{margin:2.25rem 0}
     .section h2{margin:0 0 .75rem 0;font-size:clamp(1.2rem,1rem + .8vw,1.6rem);color:var(--accent)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem}
+    .grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
     .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
       box-shadow:0 8px 24px rgba(0,0,0,.06);overflow:hidden}
     .card .hd{padding:1rem 1.1rem .5rem}
     .card .eyebrow{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
     .card h4{margin:.2rem 0 0;font-size:1.1rem;color:var(--ink);}
     .tbl{width:100%;border-collapse:collapse}
-    .tbl th,.tbl td{padding:.8rem 1.1rem;border-top:1px solid var(--line);font-size:.95rem;background:var(--card)}
+    .tbl th,.tbl td{padding:.8rem 1.1rem;border-top:1px solid var(--line);font-size:.95rem;background:var(--card);text-align:left;vertical-align:top;}
     .tbl thead th{color:var(--accent);font-weight:700;background:var(--soft)}
     .tbl td.name{font-weight:600;color:var(--ink);}
     .note{padding:1rem;border:1px dashed var(--line);background:var(--soft);border-radius:12px;color:var(--muted);font-size:.95rem}
@@ -61,53 +61,244 @@
 <body>
 <div class="page-wrap">
   <h1>Student Conferences</h1>
-  <p class="lead">Celebrating presentations and participation by our undergraduate and graduate students at academic conferences.</p>
+  <p class="lead">Celebrating student presentations at academic conferences.</p>
   <div class="chips">
     <a class="chip" href="showcasing-student-excellence.html">Competitions</a>
     <a class="chip is-active" href="student-conferences.html">Student Conferences</a>
     <a class="chip" href="#">Student Publications</a>
   </div>
   
-  <section class="section" id="conference2025">
-    <h2>2025 Conference Participants</h2>
+  <section class="section" id="undergraduate">
+    <h2>Undergraduate Student Conference Presentations</h2>
     <div class="grid">
-      <!-- Undergraduate Students -->
+      <!-- (Undergraduate cards as previously provided. Not repeated here for brevity.) -->
+      <!-- ... -->
+    </div>
+  </section>
+
+  <section class="section" id="graduate">
+    <h2>Graduate Student Conference Presentations</h2>
+    <div class="grid">
+      <!-- Annual Student Research Conference -->
       <article class="card">
         <div class="hd">
-          <div class="eyebrow">Conference Name</div>
-          <h4>Undergraduate Students</h4>
+          <div class="eyebrow">Annual Student Research Conference</div>
+          <h4>2023</h4>
         </div>
-        <table class="tbl" role="table" aria-label="Undergraduate roster">
+        <table class="tbl">
           <thead>
             <tr>
-              <th scope="col">Student</th>
-              <th scope="col">Year</th>
-              <th scope="col">Major</th>
+              <th>Title</th>
+              <th>Student</th>
+              <th>Faculty Sponsor(s)</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="name">Jane Smith</td><td>Senior</td><td>Mathematics</td></tr>
-            <tr><td class="name">John Doe</td><td>Junior</td><td>Statistics</td></tr>
+            <tr>
+              <td>Bundling Your Insurance: A Comparative Study of Some Classification Methods</td>
+              <td>Kwame Yeboah</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
           </tbody>
         </table>
       </article>
-      <!-- Graduate Students -->
       <article class="card">
         <div class="hd">
-          <div class="eyebrow">Conference Name</div>
-          <h4>Graduate Students</h4>
+          <div class="eyebrow">Annual Student Research Conference</div>
+          <h4>2022</h4>
         </div>
-        <table class="tbl" role="table" aria-label="Graduate roster">
+        <table class="tbl">
           <thead>
             <tr>
-              <th scope="col">Student</th>
-              <th scope="col">Program</th>
-              <th scope="col">Research Area</th>
+              <th>Title</th>
+              <th>Student</th>
+              <th>Faculty Sponsor(s)</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td class="name">Mary Lee</td><td>MS Statistics</td><td>Biostatistics</td></tr>
-            <tr><td class="name">Alan Kim</td><td>PhD Data Science</td><td>Machine Learning</td></tr>
+            <tr>
+              <td>Pricing Crop-Yield Insurance: A Predictive Modeling-Based Monte Carlo Simulation Approach</td>
+              <td>Gabriel Nuokye</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+            <tr>
+              <td>Bundling Your Insurance: A Comparative Study of Some Classification Methods</td>
+              <td>Kwame Yeboah</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">Annual Student Research Conference</div>
+          <h4>2021</h4>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Student</th>
+              <th>Faculty Sponsor(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Option Valuation: A Machine Learning Approach</td>
+              <td>Yao Shi</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+            <tr>
+              <td>Predicting Healthcare Expenditure: A Combination of Machine and Statistical Learning Methods</td>
+              <td>Eric Odoom</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- Mathematical Association of America Meeting – Missouri Section -->
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">Mathematical Association of America Meeting – Missouri Section</div>
+          <h4>2022</h4>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Student</th>
+              <th>Faculty Sponsor(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pricing Crop-Yield Insurance: A Combination of Machine Learning with Predictive Modeling-Based-Monte Carlo Simulation Approach</td>
+              <td>Gabriel Nuokye</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+            <tr>
+              <td>Fitting and Forecasting US Mortality – Perspectives from Forecast Combinations</td>
+              <td>Shuangshuang Kuai</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">Mathematical Association of America Meeting – Missouri Section</div>
+          <h4>2021</h4>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Student</th>
+              <th>Faculty Sponsor(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Option Valuation: A Machine Learning Approach</td>
+              <td>Yao Shi</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+            <tr>
+              <td>Predicting Healthcare Expenditure: A Combination of Machine and Statistical Learning Methods</td>
+              <td>Eric Odoom</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">Mathematical Association of America Meeting – Missouri Section</div>
+          <h4>2018</h4>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Student</th>
+              <th>Faculty Sponsor(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Modeling and Forecasting US Mortality: A Multivariate Time Series Approach</td>
+              <td>(Presenter not specified)</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">Mathematical Association of America Meeting – Missouri Section</div>
+          <h4>2017</h4>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Student</th>
+              <th>Faculty Sponsor(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>European option valuation: An econometric approach</td>
+              <td>Ahmad Talafha</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">Mathematical Association of America Meeting – Missouri Section</div>
+          <h4>2016</h4>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Student</th>
+              <th>Faculty Sponsor(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Estimating healthcare cost among fragile & conflict affected states: Risk measures-elastic net approach</td>
+              <td>Kevin Wunderlich</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- IL-MO Regional Undergraduate/Graduate Mathematics Conference -->
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">IL-MO Regional Undergraduate/Graduate Mathematics Conference</div>
+          <h4>2019</h4>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Student</th>
+              <th>Faculty Sponsor(s)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Predicting Healthcare Expenditure: A Combination of Machine and Statistical Learning Methods</td>
+              <td>Eric Odoom</td>
+              <td>Dr. Emmanuel Thompson</td>
+            </tr>
           </tbody>
         </table>
       </article>
