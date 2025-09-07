@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Student Conferences</title>
+  <title>Statistics & Data Science Competitions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
   body, html {
@@ -21,25 +21,6 @@
     --card: #ffffffee;
     --soft: #e0f2fe;
     --radius: 16px;
-    --mainnav: #2159ad;
-    --mainnav-link: #fff;
-    --mainnav-link-hover: #ffe082;
-  }
-  .main-nav {
-    background: var(--mainnav);
-    padding: 1rem 0.5rem;
-    text-align: right;
-  }
-  .main-nav a {
-    color: var(--mainnav-link);
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 1.5rem 0 0;
-    font-size: 1.3rem;
-    transition: color 0.2s;
-  }
-  .main-nav a:hover {
-    color: var(--mainnav-link-hover);
   }
   .page-wrap{
     max-width:1100px;
@@ -59,52 +40,183 @@
   .lead{margin:.25rem 0 1.25rem;color:var(--muted)}
   .chips{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0 2rem}
   .chip{background:var(--soft);border:1px solid var(--line);padding:.35rem .7rem;border-radius:999px;
-    font-size:.9rem;text-decoration:none;color:var(--ink);transition:background 0.2s;}
+    font-size:.9rem;text-decoration:none;color:var(--ink)}
   .chip.is-active{background:var(--chip);color:white;border-color:transparent;pointer-events:none;}
-  /* ... rest of your student page CSS ... */
+  .section{margin:2.25rem 0}
+  .section h2{margin:0 0 .75rem 0;font-size:clamp(1.2rem,1rem + .8vw,1.6rem);color:var(--accent)}
+  .year{margin:1.5rem 0}
+  .year h3{margin:.25rem 0 .9rem;font-size:1.15rem;color:var(--muted);font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:0 8px 24px rgba(0,0,0,.06);overflow:hidden}
+  .card .hd{padding:1rem 1.1rem .5rem}
+  .card .eyebrow{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .card h4{margin:.2rem 0 0;font-size:1.1rem;color:var(--ink);}
+  .card .sub{margin:.35rem 0 0;color:var(--muted);font-size:.95rem}
+  .meta{padding:0 1.1rem .75rem;color:var(--muted);font-size:.9rem}
+  .meta a{color:inherit;text-decoration:underline}
+  .tbl{width:100%;border-collapse:collapse}
+  .tbl th,.tbl td{padding:.8rem 1.1rem;border-top:1px solid var(--line);font-size:.95rem;background:var(--card)}
+  .tbl thead th{color:var(--accent);font-weight:700;background:var(--soft)}
+  .tbl td.name{font-weight:600;color:var(--ink);}
+  .footer-strip{padding:.8rem 1.1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem;background:var(--soft)}
+  .note{padding:1rem;border:1px dashed var(--line);background:var(--soft);border-radius:12px;color:var(--muted);font-size:.95rem}
+  @media (prefers-color-scheme: dark){ :root{} }
   </style>
 </head>
 <body>
-  <!-- Main Site Navigation -->
-  <div class="main-nav">
-    <a href="index.html">Home</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="research.html">Research</a>
-    <a href="service.html">Service</a>
-    <a href="professional.html">Professional Activities</a>
-    <!-- Add other main site links as needed -->
+<div class="page-wrap">
+  <h1>Statistics & Data Science Competitions</h1>
+  <p class="lead">Showcasing student excellence in analytics, visualization, and scientific communication across local and national competitions.</p>
+  <div class="chips">
+    <a class="chip is-active" href="#">Competitions</a>
+    <a class="chip" href="#">Student Conferences</a>
+    <a class="chip" href="#">Student Publications</a>
   </div>
-  <div class="page-wrap">
-    <h1>Student Conferences</h1>
-    <div class="chips">
-      <a class="chip" href="showcasing-student-excellence.html">Showcasing Student Excellence</a>
-      <a class="chip is-active" href="student-conferences.html">Student Conferences</a>
-      <a class="chip" href="student-publication.html">Student Publications</a>
+  <section class="section" id="y2025">
+    <h2>2025</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">ASA DataFest @ University of Missouri</div>
+          <h4>Winner: Best Use of Statistical Analysis</h4>
+          <p class="sub"><strong>The Pirates</strong> — Southeast Missouri State University</p>
+        </div>
+        <div class="meta">
+          Results: <a href="https://datafest.stat.missouri.edu/datafest2025/result.html" target="_blank" rel="noopener">Official page</a> &nbsp;•&nbsp;
+          Photos: <a href="https://datafest.stat.missouri.edu/datafest2025/photos.html" target="_blank" rel="noopener">Event gallery</a>
+        </div>
+        <table class="tbl" role="table" aria-label="Team roster">
+          <thead>
+            <tr>
+              <th scope="col">Student</th>
+              <th scope="col">Year</th>
+              <th scope="col">Major</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="name">Noah Lynch</td><td>Sophomore</td><td>Mathematics</td></tr>
+            <tr><td class="name">Abhishek Shrestha</td><td>Senior</td><td>Mathematics</td></tr>
+            <tr><td class="name">Krishna Thakar</td><td>Senior</td><td>Computer Science</td></tr>
+            <tr><td class="name">Deepshikha Karki</td><td>Junior</td><td>Mathematics</td></tr>
+          </tbody>
+        </table>
+        <div class="meta">
+          <strong>Faculty mentors:</strong> Dr. Emmanuel Thompson &amp; Dr. Mohamed Abu Sheha
+        </div>
+        <div class="footer-strip">
+          <strong>Award:</strong> Best Use of Statistical Analysis &nbsp;•&nbsp;
+          <strong>Competition:</strong> DataFest 2025 @ MIZZOU
+        </div>
+      </article>
     </div>
-    <!-- Page content goes here -->
-    <p class="lead">This page lists student conference presentations, posters, and awards.</p>
-    <!-- Example Conference Section -->
-    <section class="section">
-      <h2>2025</h2>
-      <div class="grid">
-        <article class="card">
-          <div class="hd">
-            <div class="eyebrow">Joint Mathematics Meetings</div>
-            <h4>Undergraduate Poster Session</h4>
-            <p class="sub"><strong>Jane Doe</strong> — Southeast Missouri State University</p>
-          </div>
-          <div class="meta">
-            Title: "Statistical Modeling of XYZ" <br>
-            <strong>Faculty mentor:</strong> Dr. Emmanuel Thompson
-          </div>
-          <div class="footer-strip">
-            <strong>Award:</strong> Honorable Mention &nbsp;•&nbsp;
-            <strong>Conference:</strong> JMM 2025
-          </div>
-        </article>
-      </div>
-    </section>
-    <!-- More conference sections can go here -->
-  </div>
+  </section>
+  <section class="section" id="y2024">
+    <h2>2024</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">ASA DataFest @ University of Missouri</div>
+          <h4>Winner: Best in Statistical Analysis</h4>
+          <p class="sub"><strong>The Pirates</strong> — Southeast Missouri State University</p>
+        </div>
+        <div class="meta">
+          Results: <a href="https://datafest.stat.missouri.edu/datafest2024/result.html" target="_blank" rel="noopener">Official page</a> &nbsp;•&nbsp;
+          Photos: <a href="https://datafest.stat.missouri.edu/datafest2024/photos.html" target="_blank" rel="noopener">Event gallery</a>
+        </div>
+        <table class="tbl" role="table" aria-label="Team roster">
+          <thead>
+            <tr>
+              <th scope="col">Student</th>
+              <th scope="col">Year</th>
+              <th scope="col">Major</th>
+              <th scope="col">University</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name">Moe Toyoda</td>
+              <td>Senior</td>
+              <td>Mathematics</td>
+              <td>Southeast Missouri State University</td>
+            </tr>
+            <tr>
+              <td class="name">Gwen Squires</td>
+              <td>Junior</td>
+              <td>Mathematics</td>
+              <td>Southeast Missouri State University</td>
+            </tr>
+            <tr>
+              <td class="name">Nguyen Thao Pham</td>
+              <td>Senior</td>
+              <td>Computer Information System</td>
+              <td>Southeast Missouri State University</td>
+            </tr>
+            <tr>
+              <td class="name">Samuel Shevlin</td>
+              <td>Senior</td>
+              <td>Mathematics</td>
+              <td>Southeast Missouri State University</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="meta">
+          <strong>Faculty mentors:</strong> Dr. Emmanuel Thompson &amp; Dr. Mohamed Abu Sheha
+        </div>
+        <div class="footer-strip">
+          <strong>Award:</strong> Best in Statistical Analysis &nbsp;•&nbsp;
+          <strong>Competition:</strong> DataFest 2024 @ MIZZOU
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="section" id="y2023">
+    <h2>2023</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">ASA DataFest @ University of Missouri</div>
+          <h4>Winner: Best in Show</h4>
+          <p class="sub"><strong>The Pirates</strong> — Southeast Missouri State University</p>
+        </div>
+        <div class="meta">
+          Results: <a href="https://datafest.stat.missouri.edu/datafest2023/result.html" target="_blank" rel="noopener">Official page</a> &nbsp;•&nbsp;
+          Photos: <a href="https://datafest.stat.missouri.edu/datafest2023/photos.html" target="_blank" rel="noopener">Event gallery</a>
+        </div>
+        <table class="tbl" role="table" aria-label="Team roster">
+          <thead>
+            <tr>
+              <th scope="col">Student</th>
+              <th scope="col">Year</th>
+              <th scope="col">Major</th>
+              <th scope="col">University</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="name">Jacob Beaird</td>
+              <td>Senior</td>
+              <td>Mathematics</td>
+              <td>Southeast Missouri State University</td>
+            </tr>
+            <tr>
+              <td class="name">Moe Toyoda</td>
+              <td>Junior</td>
+              <td>Mathematics</td>
+              <td>Southeast Missouri State University</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="meta">
+          <strong>Faculty mentor:</strong> Dr. Yi-Ching Lee
+        </div>
+        <div class="footer-strip">
+          <strong>Award:</strong> Best in Show &nbsp;•&nbsp;
+          <strong>Competition:</strong> DataFest 2023 @ MIZZOU
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
 </body>
 </html>
