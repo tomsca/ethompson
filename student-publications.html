@@ -3,17 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <title>Student Publications | Emmanuel Thompson</title>
-  <!-- include your stylesheets and custom CSS here -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .chips {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin: 2.5em auto 2em auto;
+      justify-content: center;
+      max-width: 700px;
+    }
+    .chip {
+      background: #e0f2fe;
+      border: 1px solid #e2e8f0;
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      font-size: .97rem;
+      text-decoration: none;
+      color: #111111;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .chip.is-active {
+      background: #0ea5e9;
+      color: white;
+      border-color: transparent;
+      pointer-events: none;
+    }
+    .publication-section {
+      max-width: 850px;
+      margin: 2em auto;
+      background: rgba(249,250,252, 0.97);
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(30,40,60,0.10);
+      padding: 2.5em 2.5em 2em 2.5em;
+      position: relative;
+      z-index: 2;
+    }
+    .publication-section h1, .publication-section h2 {
+      color: #174ea6;
+      margin-bottom: 1.2em;
+      font-weight: 700;
+      text-align: center;
+    }
+    .publication {
+      margin-bottom: 2.5em;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 1.5em;
+    }
+    .publication:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .publication-title {
+      font-size: 1.13em;
+      font-weight: 600;
+      color: #0f466e;
+      margin-bottom: .25em;
+    }
+    .pub-meta {
+      color: #444;
+      font-size: .97em;
+      margin-bottom: .6em;
+    }
+    .pub-label {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0f466e;
+      border-radius: 6px;
+      padding: .18em .6em;
+      font-size: .89em;
+      margin-right: .6em;
+      margin-bottom: .4em;
+      font-weight: 500;
+    }
+    .pub-link {
+      color: #0ea5e9;
+      text-decoration: underline;
+      font-size: .99em;
+      word-break: break-all;
+    }
+    @media (max-width: 600px) {
+      .publication-section {
+        padding: 1.2em 0.7em;
+      }
+      .chips {
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5em 0 1em 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation here -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="professional-activities.html">Professional Activities</a></li>
+      <li><a href="actuarial-science-resources.html">Actuarial Science Resources</a></li>
+      <li><a href="statistics-data-science-resources.html">Statistics/Data Science Resources</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
   <main>
-    <!-- Chips or tabs navigation here -->
-    <section>
+    <div class="chips">
+      <a class="chip" href="showcasing-student-excellence.html">Showcasing Student Excellence</a>
+      <a class="chip" href="student-conferences.html">Student Conferences</a>
+      <a class="chip is-active" href="student-publications.html">Student Publications</a>
+    </div>
+    <section class="publication-section">
       <h1>Student Publications</h1>
-      <!-- Your publication entries -->
+      <div class="publication">
+        <div class="publication-title">
+          Prevalence and predictors of physical abuse of women in Uganda and Malawi
+        </div>
+        <div class="pub-meta">
+          <span class="pub-label">Journal Article</span>
+          Tesfaye, M., Ndlovu, A. V., Thompson, E., & Sofo, S. (2024).
+          <br>
+          <em>Canadian Journal of Educational and Social Studies, 4(1), 11–24.</em>
+          <br>
+          <a href="https://doi.org/10.53103/CJESS.V4I1.211" target="_blank" class="pub-link">https://doi.org/10.53103/CJESS.V4I1.211</a>
+        </div>
+      </div>
+      <div class="publication">
+        <div class="publication-title">
+          Regularization-based bootstrap ranking model: Identifying healthcare indicators among all level income economies
+        </div>
+        <div class="pub-meta">
+          <span class="pub-label">Journal Article</span>
+          Thompson, E., & Talafha, A. M. (2020).
+          <br>
+          <em>Afrika Statistika, 15(3), 2431–2449.</em>
+        </div>
+      </div>
+      <div class="publication">
+        <div class="publication-title">
+          Estimating health care costs among fragile and conflict-affected states: An elastic net–risk measures approach
+        </div>
+        <div class="pub-meta">
+          <span class="pub-label">Journal Article</span>
+          Wunderlich, K., & Thompson, E. (2018).
+          <br>
+          <em>International Journal of Public Health Science, 7(3), 175.</em>
+        </div>
+      </div>
+      <div class="publication">
+        <div class="publication-title">
+          On valuing European option: VAR–COVAR approach
+        </div>
+        <div class="pub-meta">
+          <span class="pub-label">Journal Article</span>
+          Talafha, A. M., & Thompson, E. (2017).
+          <br>
+          <em>Journal of Finance and Investment Analysis, 6(3), 1–38.</em>
+        </div>
+      </div>
+      <div class="publication">
+        <div class="publication-title">
+          Forecasting a composite indicator of economic activity in Ghana: A comparison of data science methods
+        </div>
+        <div class="pub-meta">
+          <span class="pub-label">Journal Article</span>
+          Thompson, E., & Talafha, A. M. (2017).
+          <br>
+          <em>Journal of Statistical and Econometric Methods, 6(4), 19–51.</em>
+        </div>
+      </div>
+      <div class="publication">
+        <div class="publication-title">
+          Short-term interest rate model: Calibration of the Vasicek process to Ghana’s treasury rate
+        </div>
+        <div class="pub-meta">
+          <span class="pub-label">Journal Article</span>
+          Thompson, E., Engmann, G. M., & Butorac, A. (2016).
+          <br>
+          <em>Journal of Finance and Investment Analysis, 5(1), 71–79.</em>
+        </div>
+      </div>
     </section>
   </main>
-  <!-- Footer here -->
+  <footer>
+    <div class="custom-footer">
+      <hr class="footer-line">
+      <div class="footer-content">
+        © <a href="mailto:ethompson@semo.edu" class="footer-link">Emmanuel Thompson</a> 2022 – 2025 |
+        <a href="https://github.com/tomsca" target="_blank" class="footer-link">Github</a> |
+        <a href="https://www.linkedin.com/in/emmanuel-thompson/" target="_blank" class="footer-link">Linkedin</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
