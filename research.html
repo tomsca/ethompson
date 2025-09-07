@@ -1,21 +1,114 @@
-<div class="chips">
-  <a class="chip is-active" href="showcasing-student-excellence.html">Showcasing Student Excellence</a>
-  <a class="chip" href="student-conferences.html">Student Conferences</a>
-  <a class="chip" href="#">Student Publications</a>
-</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Research | Emmanuel Thompson</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .chips {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin: 2.5em auto 2em auto;
+      justify-content: center;
+      max-width: 700px;
+    }
+    .chip {
+      background: #e0f2fe;
+      border: 1px solid #e2e8f0;
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      font-size: .97rem;
+      text-decoration: none;
+      color: #111111;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .chip.is-active {
+      background: #0ea5e9;
+      color: white;
+      border-color: transparent;
+      pointer-events: none;
+    }
+    .research-project {
+      max-width: 750px;
+      margin: 2em auto;
+      background: rgba(249,250,252, 0.97);
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(30,40,60,0.10);
+      padding: 2.5em 2.5em 2em 2.5em;
+      position: relative;
+      z-index: 2;
+    }
+    .research-project h2 {
+      color: #174ea6;
+      margin-bottom: 1.2em;
+      font-size: 1.2em;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+    .research-project h3 {
+      margin-top: 1.5em;
+      margin-bottom: .5em;
+      color: #2567b3;
+      font-size: 1.05em;
+    }
+    .research-project h4 {
+      margin-top: 1.25em;
+      margin-bottom: .5em;
+      color: #174ea6;
+      font-size: 1em;
+      font-weight: 600;
+    }
+    .years {
+      font-size: .98em;
+      color: #1a5c8e;
+      font-weight: 400;
+    }
+    .research-project ul {
+      padding-left: 1.1em;
+      margin-top: 0.6em;
+      margin-bottom: 0;
+    }
+    .research-project li {
+      margin-bottom: 1em;
+      font-size: 1.09em;
+      line-height: 1.6;
+    }
+    .research-project a {
+      color: #174ea6;
+      text-decoration: none;
+      border-bottom: 1px dotted #174ea6;
+      transition: color 0.15s;
+      font-weight: 500;
+    }
+    .research-project a:hover {
+      color: #d95a11;
+      border-bottom: 1px solid #d95a11;
+    }
+    .footnote {
+      margin-top: 1em;
+      font-size: .98em;
+      color: #666;
+    }
+    @media (max-width: 600px) {
+      .research-project {
+        padding: 1.2em 0.7em;
+      }
+      .chips {
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5em 0 1em 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="research.html">Research</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
       <li><a href="service.html">Service</a></li>
       <li><a href="professional-activities.html">Professional Activities</a></li>
       <li><a href="actuarial-science-resources.html">Actuarial Science Resources</a></li>
@@ -25,99 +118,105 @@
     </ul>
   </nav>
   <main>
-     <section class="research-project">
-  <h2>Project Title: Predictive Statistical Modeling of Unemployment-Related Lack of Health 
-Insurance Coverage among US Adults <span class="years">(2025 - Present)</span></h2>
-  <h3>Group Members</h3>
-  <ul>
-    <li>
-      <strong>Emmanuel Thompson, PhD, AASG</strong><br>
-      Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
-      Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
-    </li>
-    <li>
-      <strong>Mohamed Abu Sheha, PhD</strong><br>
-      Assistant Professor, Statistics – Southeast Missouri State University.<br>
-      Email: <a href="mailto:masheha@semo.edu">masheha@semo.edu</a>
-    </li>
-  </ul>
-  <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
-</section>
-     <section class="research-project">
-  <h2>Project Title: Statistical Modeling - Bayesian, Parametric, Semi-Parametric, and Non-Parametric <span class="years">(2025 - Present)</span></h2>
-  <h3>Group Members</h3>
-  <ul>
-    <li>
-      <strong>Emmanuel Thompson, PhD, AASG</strong><br>
-      Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
-      Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
-    </li>
-    <li>
-      <strong>Mohamed Abu Sheha, PhD</strong><br>
-      Assistant Professor, Statistics – Southeast Missouri State University.<br>
-      Email: <a href="mailto:masheha@semo.edu">masheha@semo.edu</a>
-    </li>
-  </ul>
-  <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
-</section>
+    <!-- Section chips navigation -->
+    <div class="chips">
+      <a class="chip is-active" href="showcasing-student-excellence.html">Showcasing Student Excellence</a>
+      <a class="chip" href="student-conferences.html">Student Conferences</a>
+      <a class="chip" href="#">Student Publications</a>
+    </div>
     <section class="research-project">
-  <h2>Project Title:  Forecast Combination with an Application in Atmospheric Carbon Dioxide Concentration in 
-the USA <span class="years">(2025 - Present)</span></h2>
-  <h3>Group Members</h3>
-  <ul>
-    <li>
-      <strong>Emmanuel Thompson, PhD, AASG</strong><br>
-      Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
-      Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
-    </li>
-    <li>
-      <strong>Mohamed Abu Sheha, PhD</strong><br>
-      Assistant Professor, Statistics – Southeast Missouri State University.<br>
-      Email: <a href="mailto:masheha@semo.edu">masheha@semo.edu</a>
-    </li>
-  </ul>
-  <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
-</section>
+      <h2>Project Title: Predictive Statistical Modeling of Unemployment-Related Lack of Health 
+        Insurance Coverage among US Adults <span class="years">(2025 - Present)</span></h2>
+      <h3>Group Members</h3>
+      <ul>
+        <li>
+          <strong>Emmanuel Thompson, PhD, AASG</strong><br>
+          Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
+          Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
+        </li>
+        <li>
+          <strong>Mohamed Abu Sheha, PhD</strong><br>
+          Assistant Professor, Statistics – Southeast Missouri State University.<br>
+          Email: <a href="mailto:masheha@semo.edu">masheha@semo.edu</a>
+        </li>
+      </ul>
+      <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
+    </section>
     <section class="research-project">
-  <h2>Project Title:  Hybrid decision trees (DTs) and K-Nearest Neighbors (KNN) Classifier with Bootstrapping <span class="years">(2025 - Present)</span></h2>
-  <h3>Group Members</h3>
-  <ul>
-    <li>
-      <strong>Emmanuel Thompson, PhD, AASG</strong><br>
-      Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
-      Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
-    </li>
-    <li>
-      <strong>Mohamed Abu Sheha, PhD</strong><br>
-      Assistant Professor, Statistics – Southeast Missouri State University.<br>
-      Email: <a href="mailto:masheha@semo.edu">masheha@semo.edu</a>
-    </li>
-  </ul>
-  <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
-</section>
+      <h2>Project Title: Statistical Modeling - Bayesian, Parametric, Semi-Parametric, and Non-Parametric <span class="years">(2025 - Present)</span></h2>
+      <h3>Group Members</h3>
+      <ul>
+        <li>
+          <strong>Emmanuel Thompson, PhD, AASG</strong><br>
+          Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
+          Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
+        </li>
+        <li>
+          <strong>Mohamed Abu Sheha, PhD</strong><br>
+          Assistant Professor, Statistics – Southeast Missouri State University.<br>
+          Email: <a href="mailto:masheha@semo.edu">masheha@semo.edu</a>
+        </li>
+      </ul>
+      <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
+    </section>
     <section class="research-project">
-  <h2>Project Title: Bootstrap Quantile Regression <span class="years">(2024 - Present)</span></h2>
-  <h3>Group Members</h3>
-  <ul>
-    <li>
-      <strong>Emmanuel Thompson, PhD, AASG</strong><br>
-      Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
-      Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
-    </li>
-    <li>
-      <strong>Ahmad Talafha, PhD</strong><br>
-      Assistant Professor, Statistics – St. Edward’s University, Austin, TX.<br>
-      Email: <a href="mailto:atalafha@stedwards.edu">atalafha@stedwards.edu</a>
-    </li>
-  </ul>
-  <h4>Selected Presentations</h4>
-  <ul>
-    <li>
-      Thompson, Emmanuel, and Ahmad Talafha. “Bootstrap Quantile Regression Analysis.” Seminar presentation, Department of Mathematics Seminar, May 2, 2025.
-    </li>
-  </ul>
-  <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
-</section>
+      <h2>Project Title: Forecast Combination with an Application in Atmospheric Carbon Dioxide Concentration in 
+        the USA <span class="years">(2025 - Present)</span></h2>
+      <h3>Group Members</h3>
+      <ul>
+        <li>
+          <strong>Emmanuel Thompson, PhD, AASG</strong><br>
+          Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
+          Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
+        </li>
+        <li>
+          <strong>Mohamed Abu Sheha, PhD</strong><br>
+          Assistant Professor, Statistics – Southeast Missouri State University.<br>
+          Email: <a href="mailto:masheha@semo.edu">masheha@semo.edu</a>
+        </li>
+      </ul>
+      <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
+    </section>
+    <section class="research-project">
+      <h2>Project Title: Hybrid decision trees (DTs) and K-Nearest Neighbors (KNN) Classifier with Bootstrapping <span class="years">(2025 - Present)</span></h2>
+      <h3>Group Members</h3>
+      <ul>
+        <li>
+          <strong>Emmanuel Thompson, PhD, AASG</strong><br>
+          Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
+          Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
+        </li>
+        <li>
+          <strong>Mohamed Abu Sheha, PhD</strong><br>
+          Assistant Professor, Statistics – Southeast Missouri State University.<br>
+          Email: <a href="mailto:masheha@semo.edu">masheha@semo.edu</a>
+        </li>
+      </ul>
+      <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
+    </section>
+    <section class="research-project">
+      <h2>Project Title: Bootstrap Quantile Regression <span class="years">(2024 - Present)</span></h2>
+      <h3>Group Members</h3>
+      <ul>
+        <li>
+          <strong>Emmanuel Thompson, PhD, AASG</strong><br>
+          Professor, Actuarial Science &amp; Statistics - Southeast Missouri State University, Cape Girardeau, MO.<br>
+          Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
+        </li>
+        <li>
+          <strong>Ahmad Talafha, PhD</strong><br>
+          Assistant Professor, Statistics – St. Edward’s University, Austin, TX.<br>
+          Email: <a href="mailto:atalafha@stedwards.edu">atalafha@stedwards.edu</a>
+        </li>
+      </ul>
+      <h4>Selected Presentations</h4>
+      <ul>
+        <li>
+          Thompson, Emmanuel, and Ahmad Talafha. “Bootstrap Quantile Regression Analysis.” Seminar presentation, Department of Mathematics Seminar, May 2, 2025.
+        </li>
+      </ul>
+      <p class="footnote"><sup>1</sup> For more details about this project, contact Emmanuel Thompson via email.</p>
+    </section>
     <section class="research-project">
       <h2>Project Title: Demographic Trends of School-Based Musculoskeletal Injuries Between 2019 and 2023: An Epidemiological and Risk Analysis  <span class="years">(2024 - Present; Submitted)</span></h2>
       <h3>Group Members</h3>
@@ -128,15 +227,15 @@ the USA <span class="years">(2025 - Present)</span></h2>
           Email: <a href="mailto:ethompson@semo.edu">ethompson@semo.edu</a>
         </li>
         <li>
-  <strong>Seidu Sofo, PhD</strong><br>
-  Professor, Physical Education - Southeast Missouri State University, Cape Girardeau, MO.<br>
-  Email: <a href="mailto:ssofo@semo.edu">ssofo@semo.edu</a>
-</li>
-<li>
-  <strong>David Tomchuk, DAT, ATC, LAT, CSCS</strong><br>
-  Associate Professor, Athletic Training/Health Sciences - Southeast Missouri State University, Cape Girardeau, MO.<br>
-  Email: <a href="mailto:dtomchuk@semo.edu">dtomchuk@semo.edu</a>
-</li>
+          <strong>Seidu Sofo, PhD</strong><br>
+          Professor, Physical Education - Southeast Missouri State University, Cape Girardeau, MO.<br>
+          Email: <a href="mailto:ssofo@semo.edu">ssofo@semo.edu</a>
+        </li>
+        <li>
+          <strong>David Tomchuk, DAT, ATC, LAT, CSCS</strong><br>
+          Associate Professor, Athletic Training/Health Sciences - Southeast Missouri State University, Cape Girardeau, MO.<br>
+          Email: <a href="mailto:dtomchuk@semo.edu">dtomchuk@semo.edu</a>
+        </li>
         <li>
           <strong>Kyle Schneider, Ed.D., ATC</strong><br>
           Associate Professor, Athletic Training/Health Sciences - Southeast Missouri State University, Cape Girardeau, MO.<br>
@@ -145,7 +244,7 @@ the USA <span class="years">(2025 - Present)</span></h2>
         <li>
            <strong>Adolfo Ramos, D.A.</strong><br>
           Professor, Physical Education - Southeast Missouri State University, Cape Girardeau, MO.<br>
-          Email: <a href="aramos@semo.edu">aramos@semo.edu</a>
+          Email: <a href="mailto:aramos@semo.edu">aramos@semo.edu</a>
         </li>
         <li>
           <strong>Sunghoon Chung, Ph.D., ATC</strong><br>
