@@ -1,1 +1,129 @@
+---
+layout: default
+title: "Statistics & Data Science Competitions"
+permalink: /student-success/competitions/
+---
+
+<style>
+/* ====== Page Styling (scoped) ====== */
+:root{
+  --bg:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --chip:#0ea5e9; --accent:#0f766e;
+  --card:#ffffff; --soft:#f8fafc; --radius:16px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0b0f14; --ink:#e5e7eb; --muted:#94a3b8; --line:#1f2937; --chip:#38bdf8; --accent:#34d399; --card:#0f141b; --soft:#0c1218; }
+}
+.page-wrap{max-width:1100px;margin:2.25rem auto;padding:0 1rem;color:var(--ink)}
+h1{margin:0 0 .25rem 0;font-weight:800;font-size:clamp(1.6rem,1.2rem + 1.8vw,2.4rem)}
+.lead{margin:.25rem 0 1.25rem;color:var(--muted)}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0 2rem}
+.chip{background:var(--soft);border:1px solid var(--line);padding:.35rem .7rem;border-radius:999px;
+  font-size:.9rem;text-decoration:none;color:var(--ink)}
+.chip.is-active{background:var(--chip);color:white;border-color:transparent}
+
+.section{margin:2.25rem 0}
+.section h2{margin:0 0 .75rem 0;font-size:clamp(1.2rem,1rem + .8vw,1.6rem)}
+.year{margin:1.5rem 0}
+.year h3{margin:.25rem 0 .9rem;font-size:1.15rem;color:var(--muted);font-weight:700}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,.06);overflow:hidden}
+.card .hd{padding:1rem 1.1rem .5rem}
+.card .eyebrow{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.card h4{margin:.2rem 0 0;font-size:1.1rem}
+.card .sub{margin:.35rem 0 0;color:var(--muted);font-size:.95rem}
+.meta{padding:0 1.1rem .75rem;color:var(--muted);font-size:.9rem}
+.meta a{color:inherit;text-decoration:underline}
+.tbl{width:100%;border-collapse:collapse}
+.tbl th,.tbl td{padding:.8rem 1.1rem;border-top:1px solid var(--line);font-size:.95rem;background:var(--card)}
+.tbl thead th{color:var(--accent);font-weight:700;background:var(--soft)}
+.tbl td.name{font-weight:600}
+
+.footer-strip{padding:.8rem 1.1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem;background:var(--soft)}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem;padding:1rem;border-top:1px solid var(--line);background:var(--soft)}
+.gallery img{width:100%;height:auto;border-radius:12px;display:block}
+
+.note{padding:1rem;border:1px dashed var(--line);background:var(--soft);border-radius:12px;color:var(--muted);font-size:.95rem}
+</style>
+
+<div class="page-wrap">
+  <h1>Statistics & Data Science Competitions</h1>
+  <p class="lead">Showcasing student excellence in analytics, visualization, and scientific communication across local and national competitions.</p>
+
+  <!-- Quick category chips -->
+  <div class="chips">
+    <a class="chip is-active" href="{{ '/student-success/competitions/' | relative_url }}">Competitions</a>
+    <a class="chip" href="{{ '/student-success/conferences/' | relative_url }}">Student Conferences</a>
+    <a class="chip" href="{{ '/student-success/publications/' | relative_url }}">Student Publications</a>
+  </div>
+
+  <!-- ===== 2025 ===== -->
+  <section class="section" id="y2025">
+    <h2>2025</h2>
+
+    <div class="grid">
+      <!-- DataFest 2025 @ MIZZOU -->
+      <article class="card">
+        <div class="hd">
+          <div class="eyebrow">ASA DataFest @ University of Missouri</div>
+          <h4>Winner: Best Use of Statistical Analysis</h4>
+          <p class="sub"><strong>The Pirates</strong> — Southeast Missouri State University</p>
+        </div>
+
+        <div class="meta">
+          Results: <a href="https://datafest.stat.missouri.edu/datafest2025/result.html" target="_blank" rel="noopener">Official page</a> &nbsp;•&nbsp;
+          Photos: <a href="https://datafest.stat.missouri.edu/datafest2025/photos.html" target="_blank" rel="noopener">Event gallery</a>
+        </div>
+
+        <table class="tbl" role="table" aria-label="Team roster">
+          <thead>
+            <tr>
+              <th scope="col">Student</th>
+              <th scope="col">Year</th>
+              <th scope="col">Major</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="name">Noah Lynch</td><td>Sophomore</td><td>Mathematics</td></tr>
+            <tr><td class="name">Abhishek Shrestha</td><td>Senior</td><td>Mathematics</td></tr>
+            <tr><td class="name">Krishna Thakar</td><td>Senior</td><td>Computer Science</td></tr>
+            <tr><td class="name">Deepshikha Karki</td><td>Junior</td><td>Mathematics</td></tr>
+          </tbody>
+        </table>
+
+        <div class="footer-strip">
+          <strong>Award:</strong> Best Use of Statistical Analysis &nbsp;•&nbsp;
+          <strong>Competition:</strong> DataFest 2025 @ MIZZOU
+        </div>
+
+        <!-- Optional local photos — drop images into /assets/datafest2025/ and update filenames -->
+        <div class="gallery" aria-label="Highlights (optional)">
+          <img src="{{ '/assets/datafest2025/team1.jpg' | relative_url }}" alt="SEMO team celebrating win" loading="lazy">
+          <img src="{{ '/assets/datafest2025/present1.jpg' | relative_url }}" alt="Team presenting findings" loading="lazy">
+          <img src="{{ '/assets/datafest2025/group1.jpg' | relative_url }}" alt="With faculty mentors" loading="lazy">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== 2024 ===== -->
+  <section class="section" id="y2024">
+    <h2>2024</h2>
+    <div class="note">
+      Add 2024 competition highlights here. Duplicate the “card” block above and fill in the details
+      (event, award, roster, result links, and optional gallery). You can list multiple cards per year.
+    </div>
+  </section>
+
+  <!-- ===== 2023 ===== -->
+  <section class="section" id="y2023">
+    <h2>2023</h2>
+    <div class="note">
+      Add 2023 competition highlights here. Keep a consistent structure so visitors can scan quickly.
+    </div>
+  </section>
+</div>
 
