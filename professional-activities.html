@@ -1,14 +1,73 @@
-<div class="chips">
-  <a class="chip is-active" href="showcasing-student-excellence.html">Showcasing Student Excellence</a>
-  <a class="chip" href="student-conferences.html">Student Conferences</a>
-  <a class="chip" href="#">Student Publications</a>
-</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Professional Activities | Emmanuel Thompson</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .chips {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin: 2.5em auto 2em auto;
+      justify-content: center;
+      max-width: 700px;
+    }
+    .chip {
+      background: #e0f2fe;
+      border: 1px solid #e2e8f0;
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      font-size: .97rem;
+      text-decoration: none;
+      color: #111111;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .chip.is-active {
+      background: #0ea5e9;
+      color: white;
+      border-color: transparent;
+      pointer-events: none;
+    }
+    .professional-membership, .service-to-orgs {
+      max-width: 700px;
+      margin: 2em auto;
+      background: rgba(249,250,252, 0.97);
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(30,40,60,0.10);
+      padding: 2.5em 2.5em 2em 2.5em;
+      position: relative;
+      z-index: 2;
+    }
+    .professional-membership h2, .service-to-orgs h2 {
+      color: #174ea6;
+      margin-bottom: 1.2em;
+      font-size: 1.4em;
+      font-weight: 700;
+      text-align: center;
+    }
+    .professional-membership ul, .service-to-orgs ul {
+      padding-left: 1.1em;
+      margin-top: 0.6em;
+      margin-bottom: 0;
+    }
+    .professional-membership li, .service-to-orgs li {
+      margin-bottom: 1em;
+      font-size: 1.09em;
+      line-height: 1.6;
+    }
+    @media (max-width: 600px) {
+      .professional-membership, .service-to-orgs {
+        padding: 1.2em 0.7em;
+      }
+      .chips {
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5em 0 1em 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -17,7 +76,7 @@
       <li><a href="teaching.html">Teaching</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="service.html">Service</a></li>
-      <li><a href="professional-activities.html">Professional Activities</a></li>
+      <li><a href="professional-activities.html" class="active">Professional Activities</a></li>
       <li><a href="actuarial-science-resources.html">Actuarial Science Resources</a></li>
       <li><a href="statistics-data-science-resources.html">Statistics/Data Science Resources</a></li>
       <li><a href="news.html">News</a></li>
@@ -25,6 +84,12 @@
     </ul>
   </nav>
   <main>
+    <!-- Section chips navigation -->
+    <div class="chips">
+      <a class="chip is-active" href="showcasing-student-excellence.html">Showcasing Student Excellence</a>
+      <a class="chip" href="student-conferences.html">Student Conferences</a>
+      <a class="chip" href="#">Student Publications</a>
+    </div>
     <section class="professional-membership">
       <h2>Professional Membership</h2>
       <ul>
@@ -35,7 +100,6 @@
         <li>Member, Statistical Society of Canada, Canada, 2008 – 2018; 2021 – Present.</li>
       </ul>
     </section>
-
     <section class="service-to-orgs">
       <h2>Service to Professional Organizations</h2>
       <ul>
