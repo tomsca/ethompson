@@ -38,10 +38,13 @@ nav ul li a {
   padding: 0.35em 0.75em;
   border-radius: var(--nav-pill-radius);
   font-size: 0.90em;
-  transition: all var(--nav-transition-duration);
+  transition-property: transform, box-shadow, outline-color;
+  transition-duration: var(--nav-transition-duration);
   display: inline-block;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  outline: 2px solid transparent;
+  outline-offset: 1px;
 }
 nav ul li:nth-child(5n + 1) a {
   background: linear-gradient(135deg, #7a3cff 0%, #5f7cff 100%);
@@ -60,16 +63,16 @@ nav ul li:nth-child(5n) a {
 }
 nav ul li a.active {
   color: #fff;
-  filter: brightness(1.15);
   transform: translateY(-1px);
   box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
+  outline-color: rgba(255, 255, 255, 0.85);
 }
 nav ul li a:hover,
 nav ul li a:focus {
   color: #fff;
-  filter: brightness(1.15);
   transform: translateY(-1px);
   box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
+  outline-color: rgba(255, 255, 255, 0.85);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
