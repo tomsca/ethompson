@@ -9,39 +9,58 @@ body {
 
 /* NAVIGATION */
 nav {
-  background: #174ea6;
-  padding: 0.2em 0;
+  background: linear-gradient(90deg, #102f5e 0%, #174ea6 55%, #1f6ed4 100%);
+  padding: 0.45em 0.4em;
   overflow-x: visible;
 }
 nav ul {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 0.35em;
   list-style: none;
   margin: 0;
   padding: 0;
-  white-space: nowrap;
   overflow-x: visible;
 }
 nav ul li {
-  margin: 0 0.2em;
+  margin: 0;
 }
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  padding: 0.15em 0.3em;
-  border-radius: 3px;
+  padding: 0.35em 0.75em;
+  border-radius: 999px;
   font-size: 0.90em;
-  transition: background 0.15s;
+  transition: transform 0.18s, box-shadow 0.18s, filter 0.18s;
   display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+nav ul li:nth-child(5n + 1) a {
+  background: linear-gradient(135deg, #7a3cff 0%, #5f7cff 100%);
+}
+nav ul li:nth-child(5n + 2) a {
+  background: linear-gradient(135deg, #0067c5 0%, #00a5d5 100%);
+}
+nav ul li:nth-child(5n + 3) a {
+  background: linear-gradient(135deg, #008c6c 0%, #0bbf5d 100%);
+}
+nav ul li:nth-child(5n + 4) a {
+  background: linear-gradient(135deg, #c65f00 0%, #f0a202 100%);
+}
+nav ul li:nth-child(5n) a {
+  background: linear-gradient(135deg, #c02966 0%, #ef476f 100%);
 }
 nav ul li a.active,
 nav ul li a:hover,
 nav ul li a:focus {
-  background: #2567b3;
   color: #fff;
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
 }
 
 /* HERO SECTION */
