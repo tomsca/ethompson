@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced dplyr &amp; ggplot2 | Emmanuel Thompson</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .module-section {
+      max-width: 820px;
+      margin: 2em auto;
+      background: rgba(249,250,252, 0.97);
+      border-radius: 14px;
+      box-shadow: 0 2px 16px rgba(30,40,60,0.10);
+      padding: 2.5em 2.5em 2em 2.5em;
+      position: relative;
+      z-index: 2;
+    }
+    .module-section h1 {
+      color: #174ea6;
+      font-size: 1.7em;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.4em;
+    }
+    .module-section .lead {
+      text-align: center;
+      color: #555;
+      font-size: 1.05em;
+      margin-bottom: 2em;
+    }
+    .module-card {
+      background: #fff;
+      border-left: 4px solid #2567b3;
+      border-radius: 8px;
+      box-shadow: 0 1px 6px rgba(30,40,60,0.07);
+      padding: 1.4em 1.6em 1.2em 1.6em;
+      margin-bottom: 1.5em;
+    }
+    .module-card h2 {
+      color: #174ea6;
+      font-size: 1.13em;
+      font-weight: 700;
+      margin: 0 0 0.5em 0;
+      border: none;
+      padding: 0;
+    }
+    .module-card .module-meta {
+      font-size: 0.88em;
+      color: #888;
+      margin-bottom: 0.7em;
+    }
+    .module-card ul {
+      margin: 0.3em 0 0.8em 1.2em;
+      padding: 0;
+    }
+    .module-card li {
+      margin-bottom: 0.35em;
+      font-size: 1.03em;
+      line-height: 1.55;
+      color: #333;
+    }
+    .module-card .code-link {
+      display: inline-block;
+      margin-top: 0.6em;
+      padding: 0.3em 0.9em;
+      background: #e3ecf7;
+      border-radius: 999px;
+      font-size: 0.92em;
+      font-weight: 600;
+      color: #174ea6;
+      text-decoration: none;
+      border: 1px solid #b8d0ee;
+      transition: background 0.18s, color 0.18s;
+    }
+    .module-card .code-link:hover {
+      background: #174ea6;
+      color: #fff;
+      border-color: transparent;
+    }
+    .resources-box {
+      background: #f0f7ff;
+      border-radius: 10px;
+      padding: 1.3em 1.6em;
+      margin-top: 2em;
+    }
+    .resources-box h3 {
+      color: #174ea6;
+      font-size: 1.05em;
+      margin: 0 0 0.6em 0;
+    }
+    .resources-box ul {
+      margin: 0 0 0 1.1em;
+      padding: 0;
+    }
+    .resources-box li {
+      margin-bottom: 0.4em;
+      font-size: 1.02em;
+      line-height: 1.5;
+    }
+    .resources-box a {
+      color: #2567b3;
+      text-decoration: none;
+      border-bottom: 1px dotted #2567b3;
+      transition: color 0.17s;
+    }
+    .resources-box a:hover {
+      color: #d95a11;
+      border-bottom: 1px solid #d95a11;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.15em 0.6em;
+      border-radius: 999px;
+      font-size: 0.78em;
+      font-weight: 700;
+      margin-left: 0.4em;
+      vertical-align: middle;
+    }
+    .badge-dplyr   { background: #dbeafe; color: #1e3a8a; }
+    .badge-ggplot2 { background: #dcfce7; color: #14532d; }
+    .badge-project { background: #fef9c3; color: #713f12; }
+    @media (max-width: 600px) {
+      .module-section { padding: 1.2em 0.7em; }
+      .module-card    { padding: 1em 0.9em; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="professional-activities.html">Professional Activities</a></li>
+      <li><a href="actuarial-science-resources.html">Actuarial Science Resources</a></li>
+      <li><a href="statistics-data-science-resources.html" class="active">Statistics/Data Science Resources</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="module-section">
+      <h1>Advanced dplyr &amp; ggplot2</h1>
+      <p class="lead">
+        A structured, seven-step curriculum for moving beyond introductory R
+        into professional-grade data wrangling and visualization.
+      </p>
+
+      <!-- Module 1 -->
+      <div class="module-card">
+        <h2>
+          Module 1 &mdash; Tidyverse Foundations
+          <span class="badge badge-dplyr">dplyr</span>
+          <span class="badge badge-ggplot2">ggplot2</span>
+        </h2>
+        <div class="module-meta">Prerequisite · ~2 hours</div>
+        <ul>
+          <li>Native pipe <code>|&gt;</code> and magrittr <code>%&gt;%</code> &mdash; when to use each</li>
+          <li>Tidy data principles: <code>pivot_longer()</code>, <code>pivot_wider()</code>, <code>separate()</code>, <code>unite()</code></li>
+          <li>Factor handling with <strong>forcats</strong>: <code>fct_infreq()</code>, <code>fct_relevel()</code>, <code>fct_lump_n()</code></li>
+          <li>Date/time workflows with <strong>lubridate</strong>: parsing, arithmetic, floor_date, quarter</li>
+        </ul>
+        <a class="code-link" href="r/01-tidyverse-foundations.R">&#128196; 01-tidyverse-foundations.R</a>
+      </div>
+
+      <!-- Module 2 -->
+      <div class="module-card">
+        <h2>
+          Module 2 &mdash; Advanced dplyr
+          <span class="badge badge-dplyr">dplyr</span>
+        </h2>
+        <div class="module-meta">Core module · ~4 hours</div>
+        <ul>
+          <li>Grouped operations: <code>group_by()</code>, <code>summarise()</code>, multi-level grouping</li>
+          <li>Window functions: <code>lag()</code>, <code>lead()</code>, <code>cumsum()</code>, <code>percent_rank()</code>, <code>ntile()</code></li>
+          <li>All join types &mdash; <code>inner</code>, <code>left</code>, <code>anti</code>, <code>semi</code> &mdash; and <strong>non-equi joins</strong> with <code>join_by()</code></li>
+          <li>Rolling / nearest joins with <code>closest()</code></li>
+          <li>Rowwise workflows: <code>rowwise()</code> + <code>c_across()</code></li>
+          <li>List-columns: <code>nest()</code> / <code>unnest()</code>, <code>map()</code>, per-group modelling</li>
+          <li>Tidy evaluation: <code>{{ }}</code>, <code>across()</code>, <code>.data[[]]</code>, <code>pick()</code>, <code>enquos()</code></li>
+          <li>Performance: dtplyr / data.table back end, profiling tips</li>
+        </ul>
+        <a class="code-link" href="r/02-advanced-dplyr.R">&#128196; 02-advanced-dplyr.R</a>
+      </div>
+
+      <!-- Module 3 -->
+      <div class="module-card">
+        <h2>
+          Module 3 &mdash; Advanced ggplot2
+          <span class="badge badge-ggplot2">ggplot2</span>
+        </h2>
+        <div class="module-meta">Core module · ~4 hours</div>
+        <ul>
+          <li>Layered grammar deep-dive: geoms, stats, scales, coordinates, facets</li>
+          <li>Scale mastery: log axes, <code>dollar_format()</code>, <code>percent_format()</code>, continuous size/alpha</li>
+          <li><code>facet_wrap()</code> with free scales; <code>facet_grid()</code> for two-variable panels</li>
+          <li>Annotation strategy: <code>annotate()</code>, arrows, rectangles, callout labels</li>
+          <li>Non-overlapping labels with <strong>ggrepel</strong></li>
+          <li>Spotlighting subsets with <strong>gghighlight</strong></li>
+          <li>Rich distribution plots with <strong>ggdist</strong>: <code>stat_halfeye()</code>, <code>stat_dots()</code></li>
+          <li>Multi-panel layouts with <strong>patchwork</strong></li>
+          <li>Building a custom publication theme; <code>theme_set()</code></li>
+          <li>Custom <code>Stat</code> via <code>ggproto()</code></li>
+        </ul>
+        <a class="code-link" href="r/03-advanced-ggplot2.R">&#128196; 03-advanced-ggplot2.R</a>
+      </div>
+
+      <!-- Module 4 -->
+      <div class="module-card">
+        <h2>
+          Module 4 &mdash; Project: Health Economics Analysis
+          <span class="badge badge-project">Project</span>
+        </h2>
+        <div class="module-meta">Applied project · ~3 hours</div>
+        <ul>
+          <li><strong>dplyr focus:</strong> year-over-year window functions, rolling averages, reusable tidy-eval summaries, <code>across()</code> for multi-column stats, nested OLS models per country</li>
+          <li><strong>ggplot2 focus:</strong> four-panel patchwork dashboard, ribbon confidence bands, labelled scatter with ggrepel, custom <code>theme_health()</code></li>
+          <li>Covers: 30-country &times; 15-year panel data, health expenditure, life expectancy, infant mortality, pricing</li>
+        </ul>
+        <a class="code-link" href="r/04-project-health-economics.R">&#128196; 04-project-health-economics.R</a>
+      </div>
+
+      <!-- Module 5 -->
+      <div class="module-card">
+        <h2>
+          Module 5 &mdash; Project: Insurance Claims Analysis
+          <span class="badge badge-project">Project</span>
+        </h2>
+        <div class="module-meta">Applied project · ~3 hours</div>
+        <ul>
+          <li><strong>dplyr focus:</strong> non-equi joins for severity banding, <code>rowwise()</code> risk scoring, tidy-eval <code>summarise_by()</code> helper, window functions for frequency trends, list-column severity models</li>
+          <li><strong>ggplot2 focus:</strong> ggdist raincloud plots, loss-ratio heatmap, gghighlight spotlight, stacked bar chart with labels, pricing adequacy scatter</li>
+          <li>Covers: 5,000-policy &times; 1,800-claim auto insurance portfolio simulation</li>
+        </ul>
+        <a class="code-link" href="r/05-project-insurance.R">&#128196; 05-project-insurance.R</a>
+      </div>
+
+      <!-- Module 6 -->
+      <div class="module-card">
+        <h2>
+          Module 6 &mdash; Capstone: Before/After Portfolio
+          <span class="badge badge-dplyr">dplyr</span>
+          <span class="badge badge-ggplot2">ggplot2</span>
+        </h2>
+        <div class="module-meta">Capstone · ~2 hours</div>
+        <ul>
+          <li>Before/after data cleaning: multi-format date parsing, type coercion, string normalisation, <code>separate()</code></li>
+          <li>Before/after chart redesigns: pie &rarr; labelled bar; rainbow scatter &rarr; outcome-coloured with regression; plain boxplot &rarr; raincloud</li>
+          <li>Design principles documented in code: colour strategy, chart-type selection, annotation over legends, performance tradeoffs</li>
+          <li>Reproducibility checklist: seeds, renv, immutable raw data, Quarto rendering</li>
+        </ul>
+        <a class="code-link" href="r/06-capstone.R">&#128196; 06-capstone.R</a>
+      </div>
+
+      <!-- Resources -->
+      <div class="resources-box">
+        <h3>&#128218; Key References &amp; Practice Resources</h3>
+        <ul>
+          <li>
+            <a href="https://r4ds.hadley.nz/" target="_blank" rel="noopener">R for Data Science (2nd ed.) &mdash; Hadley Wickham, Mine &Ccedil;etinkaya-Rundel &amp; Garrett Grolemund</a>
+          </li>
+          <li>
+            <a href="https://ggplot2-book.org/" target="_blank" rel="noopener">ggplot2: Elegant Graphics for Data Analysis (3rd ed.) &mdash; Hadley Wickham</a>
+          </li>
+          <li>
+            <a href="https://dplyr.tidyverse.org/articles/" target="_blank" rel="noopener">Official dplyr vignettes (tidyverse.org)</a>
+          </li>
+          <li>
+            <a href="https://ggplot2.tidyverse.org/articles/" target="_blank" rel="noopener">Official ggplot2 articles (tidyverse.org)</a>
+          </li>
+          <li>
+            <a href="https://www.tidytuesday.com/" target="_blank" rel="noopener">TidyTuesday &mdash; weekly real-world data challenges</a>
+          </li>
+          <li>
+            <a href="https://patchwork.data-imaginist.com/" target="_blank" rel="noopener">patchwork &mdash; composing ggplot2 figures</a>
+          </li>
+          <li>
+            <a href="https://mjskay.github.io/ggdist/" target="_blank" rel="noopener">ggdist &mdash; uncertainty &amp; distribution visualization</a>
+          </li>
+          <li>
+            <a href="https://ggrepel.slowkow.com/" target="_blank" rel="noopener">ggrepel &mdash; repel overlapping labels</a>
+          </li>
+          <li>
+            <a href="https://yutannihilation.github.io/gghighlight/" target="_blank" rel="noopener">gghighlight &mdash; highlight ggplot2 layers</a>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="custom-footer">
+      <hr class="footer-line">
+      <div class="footer-content">
+        &copy; <a href="mailto:ethompson@semo.edu" class="footer-link">Emmanuel Thompson</a> 2022 &ndash; 2025 |
+        <a href="https://github.com/tomsca" target="_blank" class="footer-link">Github</a> |
+        <a href="https://www.linkedin.com/in/emmanuel-thompson/" target="_blank" class="footer-link">Linkedin</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
